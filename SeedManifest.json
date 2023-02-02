@@ -1,0 +1,34 @@
+{
+  "models": [
+    {
+      "attrs": [
+        {
+          "name": "image1",
+          "type": "text"
+        },
+        {
+          "empty": true,
+          "name": "image2",
+          "type": "text"
+        },
+        {
+          "name": "response",
+          "type": "json"
+        },
+        {
+          "name": "type",
+          "options": [
+            "ATTRIBUTES",
+            "COMPARE"
+          ],
+          "type": "enum"
+        }
+      ],
+      "name": "recognition"
+    },
+    {
+      "attrs": [],
+      "name": "user"
+    }
+  ]
+}
