@@ -3,6 +3,7 @@ import { Switch, Redirect } from "react-router-dom";
 import { Route } from "seed/helpers"
 import { ScriptTag } from "seed/helpers";
 
+import Dashboard from "components/dashboard/Dashboard";
 import Recognitions from "components/recognitions/Main";
 import Topnav from "components/navigation/Topnav";
 import Sidenav from "components/navigation/Sidenav";
@@ -18,8 +19,9 @@ const HomeView = () =>
       >
 
         <Switch>
-          <Route path="/home" component={Recognitions} />
-          <Redirect to="/home" />
+          <Route path="/dashboard" component={Dashboard} />
+          <Route path="/app" component={Recognitions} />
+          <Redirect to="/app" />
         </Switch>
       
       </div>

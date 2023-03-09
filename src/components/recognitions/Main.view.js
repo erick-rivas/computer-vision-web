@@ -10,7 +10,7 @@ const MainView = ({
   totalPages,
   onClickPage
 }) => (
-  <BrowserRouter basename="/home">
+  <BrowserRouter basename="/app">
     <div class="content container-fluid" >
 
       <div class="row align-items-end">

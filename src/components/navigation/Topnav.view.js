@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 
@@ -12,6 +12,7 @@ const TopnavView = () => (
       <div class="page-header page-header-light">
         <div class="navbar-nav">
           <div class="row align-items-center flex-grow-1 mt-3">
+
             <div class="col">
               {/* Logo */}
               <Link class="navbar-brand" to="/" aria-label="Front">
@@ -34,6 +35,38 @@ const TopnavView = () => (
 
             </div>
 
+          </div>
+
+          <div class="js-nav-scroller hs-nav-scroller-horizontal mt-1">
+            <ul
+              id="pageHeaderTab"
+              class="nav nav-tabs nav-tabs-light page-header-tabs"
+              role="tablist"
+            >
+
+              {/* Dashboard */}
+              <li class="nav-item">
+                <NavLink
+                  to="/dashboard"
+                  className="nav-link"
+                  style={{ padding: "0.45rem 0.85rem" }}
+                >
+                  Dashboard
+                </NavLink>
+              </li>
+
+              {/* App */}
+              <li class="nav-item">
+                <NavLink
+                  to="/app"
+                  className="nav-link"
+                  style={{ padding: "0.45rem 0.85rem" }}
+                >
+                  App
+                </NavLink>
+              </li>
+
+            </ul>
           </div>
 
         </div>
