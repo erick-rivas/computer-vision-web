@@ -13,10 +13,10 @@ const MainView = ({
   <BrowserRouter basename="/home">
     <div class="content container-fluid" >
 
-      < div class="row align-items-end">
+      <div class="row align-items-end">
         {
           recognitions.map((recognition) => (
-            <Recognition recognition={recognition} />
+            <Recognition key={recognition.id} recognition={recognition} />
           ))
         }
       </div>
@@ -28,6 +28,11 @@ const MainView = ({
 
 )
 
-MainView.propTypes = {};
+MainView.propTypes = {
+  recognitions: PropTypes.array.isRequired,
+  pageNum: PropTypes.number.isRequired,
+  totalPages: PropTypes.number.isRequired,
+  onClickPage: PropTypes.func.isRequired
+};
 
 export default MainView;

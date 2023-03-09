@@ -6,7 +6,7 @@ function Home() {
   const [isAuth, setIsAuth] = useState(false)
   const [callAuth, reqCall] = useGetCall("/auth/user", "", {
     onCompleted: (data) => setIsAuth(true),
-    onError: () => window.location.replace("/examples/login")
+    onError: () => window.location.replace("/login")
     // IMPORTANT: Switch to normal login (e.g /login) when copying
   })
   useEffect(() => {

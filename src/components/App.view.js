@@ -10,7 +10,7 @@ import css from "styles/css/App.module.css";
 
 const AppView = () =>
   <div class={css.module}>
-    <BrowserRouter>
+    <BrowserRouter basename="/">
       <Switch>
         <Route path="/login" component={Login} />
         <Route path="/logout" component={Logout} />

@@ -1,14 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import View from "components/recognitions/Recognition.view";
 
 function Recognition({ recognition }) {
 
-  const { image1, response, type } = recognition;     
+  const { image, processedImage, response, type } = recognition;     
   
-  return <View image={image1} response={JSON.parse(response)} type={type}/>;
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [visible, setVisible] = useState(false);
+
+  const closeImageViewer = () => {
+    setActiveIndex(0);
+    setVisible(false);
+  };
+  
+  const openImageViewer = (index) => {
+    setActiveIndex(index);
+    setVisible(true);
+  }
+
+  return (
+    <View 
+      type={type}
+      image={image}
+      activeIndex={activeIndex} 
+      visible={visible}
+      processedImage={processedImage} 
+      response={JSON.parse(response)} 
+      openImageViewer={openImageViewer}
+      closeImageViewer={closeImageViewer}
+    />
+  );
 }
 
-Recognition.propTypes = {};
+Recognition.propTypes = {
+  recognition: PropTypes.object.isRequired
+};
 
 export default Recognition;

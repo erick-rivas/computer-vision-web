@@ -9,13 +9,19 @@ function Main() {
   const pageSize = 4;
   const [pageNum, setPageNum] = useState(1);
 
-
   const reqRecognitions = usePagination(`
   {
     recognitionPagination {
       totalPages
       recognitions {
-        image1
+        image {
+          url
+          name
+        }
+        processedImage {
+          url
+          name
+        }
         response
         type
       }
@@ -29,9 +35,6 @@ function Main() {
   const { recognitions = [], totalPages = 0 } = reqRecognitions.data.recognitionPagination;
 
   const onClickPage = (pageNum) => setPageNum(pageNum);
-
-  console.log("pageNum: ", pageNum);
-  console.log("totalPages: ", totalPages);
 
   return (
     <View 

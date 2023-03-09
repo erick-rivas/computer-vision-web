@@ -27,27 +27,6 @@ const RecognitionFormView = ({ recognition= {}, onSubmit, error }) =>
           {({ values, setFieldValue}) =>
           <Form>
             <div class="mb-3">
-            {/* Image1 */}
-            <div class="form-group">
-            <label class="input-label">Image1</label>
-            <Field type="text" name="image1"
-              as="textarea" rows="3"
-              class="form-control" />
-            </div>
-            {/* Image2 */}
-            <div class="form-group">
-            <label class="input-label">Image2</label>
-            <Field type="text" name="image2"
-              as="textarea" rows="3"
-              class="form-control" />
-            </div>
-            {/* Response */}
-            <div class="form-group">
-            <label class="input-label">Response</label>
-            <Field type="text" name="response"
-              as="textarea" rows="3"
-              class="form-control" />
-            </div>
             {/* Type */}
             <div class="form-group">
             <label class="input-label">Type</label>
@@ -57,6 +36,41 @@ const RecognitionFormView = ({ recognition= {}, onSubmit, error }) =>
               <option value="ATTRIBUTES">ATTRIBUTES</option>
               <option value="COMPARE">COMPARE</option>
             </Field>
+            </div>
+            {/* Response */}
+            <div class="form-group">
+            <label class="input-label">Response</label>
+            <Field type="text" name="response"
+              as="textarea" rows="3"
+              class="form-control" />
+            </div>
+            {/* Image */}
+            <div class="form-group">
+            <label class="input-label">Image</label>
+            <FileField name="image"
+              accept="*/*" setFieldValue={setFieldValue}
+              class="form-control"  />
+            </div>
+            {/* Image base64 */}
+            <div class="form-group">
+            <label class="input-label">Image base64</label>
+            <Field type="text" name="imageBase64"
+              as="textarea" rows="3"
+              class="form-control" />
+            </div>
+            {/* Processed image */}
+            <div class="form-group">
+            <label class="input-label">Processed image</label>
+            <FileField name="processedImage"
+              accept="*/*" setFieldValue={setFieldValue}
+              class="form-control"  />
+            </div>
+            {/* Processed image base64 */}
+            <div class="form-group">
+            <label class="input-label">Processed image base64</label>
+            <Field type="text" name="processedImageBase64"
+              as="textarea" rows="3"
+              class="form-control" />
             </div>
             </div>
             {error ? <div class="alert alert-soft-danger">{error}</div> : null}

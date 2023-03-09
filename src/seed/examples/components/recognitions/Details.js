@@ -16,11 +16,13 @@ function RecognitionDetails({ recognitionId, onCompleted = () => null, onError =
   const reqRecognition = useDetail(`
   {
     recognition {
-      image1
-      image2
-      response
       type
+      response
+      imageBase64
+      processedImageBase64
       createdAt
+      image { }
+      processedImage { }
     }
   }`, recognitionId);
   

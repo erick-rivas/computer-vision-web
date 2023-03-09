@@ -8,10 +8,16 @@ export const RECOGNITION = `
 {
   recognition {
     id
-    image1
-    image2
-    response
     type
+    response
+    imageBase64
+    processedImageBase64
+    image {
+      id
+    }
+    processedImage {
+      id
+    }
   }
 }
 `;
@@ -19,25 +25,35 @@ export const RECOGNITION = `
 export const SET_RECOGNITION = `
 mutation Set(
   $id: Int!,
-  $image1: String,
-  $image2: String,
-  $response: GenericScalar,
   $type: String,
+  $response: GenericScalar,
+  $image: Int,
+  $imageBase64: String,
+  $processedImage: Int,
+  $processedImageBase64: String,
 )
 {
   setRecognition(
     id: $id,
-    image1: $image1,
-    image2: $image2,
-    response: $response,
     type: $type,
+    response: $response,
+    image: $image,
+    imageBase64: $imageBase64,
+    processedImage: $processedImage,
+    processedImageBase64: $processedImageBase64,
   ) {
     recognition {
       id
-      image1
-      image2
-      response
       type
+      response
+      imageBase64
+      processedImageBase64
+      image {
+        id
+      }
+      processedImage {
+        id
+      }
     }
   }
 }
@@ -45,17 +61,21 @@ mutation Set(
 
 export const SAVE_RECOGNITION = `
 mutation Save(
-  $image1: String!,
-  $image2: String,
-  $response: GenericScalar!,
   $type: String!,
+  $response: GenericScalar!,
+  $image: Int!,
+  $imageBase64: String!,
+  $processedImage: Int!,
+  $processedImageBase64: String!,
 )
 {
   saveRecognition(
-    image1: $image1,
-    image2: $image2,
-    response: $response,
     type: $type,
+    response: $response,
+    image: $image,
+    imageBase64: $imageBase64,
+    processedImage: $processedImage,
+    processedImageBase64: $processedImageBase64,
   ) {
     recognition {
       id

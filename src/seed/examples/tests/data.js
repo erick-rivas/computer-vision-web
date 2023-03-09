@@ -1,8 +1,10 @@
 const GQL_RECOGNITION_ = {
-    image1: "",
-    image2: "",
-    response: "{}",
     type: "ATTRIBUTES",
+    response: "{}",
+    image: { url: "" },
+    imageBase64: "",
+    processedImage: { url: "" },
+    processedImageBase64: "",
 }
 export const GQL_RECOGNITION = {
     recognition: GQL_RECOGNITION_
@@ -21,10 +23,12 @@ export const GQL_RECOGNITION_PAGINATION = {
 }
 
 export const API_RECOGNITION = {
-    image1: "",
-    image2: "",
-    response: "{}",
     type: "ATTRIBUTES",
+    response: "{}",
+    image_id: 1,
+    image_base64: "",
+    processed_image_id: 1,
+    processed_image_base_64: "",
 }
 export const API_RECOGNITIONS = [API_RECOGNITION]
 

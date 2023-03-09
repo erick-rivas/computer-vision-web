@@ -10,8 +10,8 @@ import { Route } from "seed/helpers"
 import { ScriptTag } from "seed/helpers";
 import Recognitions from "seed/examples/components/recognitions/Recognitions";
 import Users from "seed/examples/components/users/Users";
-import Sidenav from "seed/examples/components/navigation/Sidenav";
-import Topnav from "seed/examples/components/navigation/Topnav";
+import Sidenav from "seed/examples/components/nav/Sidenav";
+import Topnav from "seed/examples/components/nav/Topnav";
 
 const HomeView = () =>
   <div>

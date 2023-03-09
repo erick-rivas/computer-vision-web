@@ -3,25 +3,32 @@
     {
       "attrs": [
         {
-          "name": "image1",
-          "type": "text"
-        },
-        {
-          "empty": true,
-          "name": "image2",
-          "type": "text"
-        },
-        {
-          "name": "response",
-          "type": "json"
-        },
-        {
           "name": "type",
           "options": [
             "ATTRIBUTES",
             "COMPARE"
           ],
           "type": "enum"
+        },
+        {
+          "name": "response",
+          "type": "json"
+        },
+        {
+          "name": "image",
+          "type": "file"
+        },
+        {
+          "name": "image_base64",
+          "type": "text"
+        },
+        {
+          "name": "processed_image",
+          "type": "file"
+        },
+        {
+          "name": "processed_image_base_64",
+          "type": "text"
         }
       ],
       "name": "recognition"

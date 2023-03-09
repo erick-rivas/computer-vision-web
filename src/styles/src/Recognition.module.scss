@@ -1,0 +1,13 @@
+@import "src/styles/base";
+
+
+.view-label {
+    color: "black";
+    position: "relative";
+    bottom: 80px;
+    left: calc(100% - 90px);
+    width: "80px";
+    height: "30px";
+    border-radius: "10%";
+    cursor: "pointer"; 
+}
