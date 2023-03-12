@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 import { Formik, Field, Form } from "formik";
 import { ScriptTag } from "seed/helpers";
 
@@ -32,16 +33,16 @@ const LoginView = ({ onSubmit, error }) =>
                   <Form>
                     <div class="text-center">
                       <div class="mb-5">
-                        <h1 class="display-4">Sign in</h1>
-                        <p>Don&apos;t have an account yet?
-                          <a href="authentication-signup-basic.html">Sign up here</a>
+                        <h1 class="display-4">Iniciar sesión</h1>
+                        <p>¿Aún no tienes la aplicación?
+                          <Link to="/stores">Descargala aqui</Link>
                         </p>
                       </div>
                     </div>
 
                     {/* Email */}
                     <div class="form-group">
-                      <label class="input-label" for="formEmail">Your email</label>
+                      <label class="input-label" for="formEmail">Tu correo</label>
                       <Field type="email" name="email" id="formEmail"
                         class="form-control form-control-lg" tabindex="1"
                         placeholder="email@address.com" required autofocus="1" />
@@ -51,8 +52,8 @@ const LoginView = ({ onSubmit, error }) =>
                     <div class="form-group">
                       <label class="input-label" for="formPassword">
                         <span class="d-flex justify-content-between align-items-center">
-                          Password
-                          <a class="input-label-secondary" href="#">Forgot Password?</a>
+                          Contraseña
+                          <a class="input-label-secondary" href="#">¿Olvidaste tu contraseña?</a>
                         </span>
                       </label>
 
@@ -80,7 +81,7 @@ const LoginView = ({ onSubmit, error }) =>
                         <Field type="checkbox" name="rememberMe"
                           id="formRememberMe" class="custom-control-input" />
                         <label class="custom-control-label text-muted" for="formRememberMe">
-                          Remember me
+                          Recuérdame
                         </label>
                       </div>
                     </div>
@@ -91,7 +92,7 @@ const LoginView = ({ onSubmit, error }) =>
                       </div> : null}
 
                     <button type="submit" class="btn btn-lg btn-block btn-primary">
-                      Sign in
+                      Ingresar
                     </button>
                   </Form>}
               </Formik>
